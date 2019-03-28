@@ -176,6 +176,7 @@ int main(void)
 {
     createBinaryTree();
 
+    system("pause");
     return 0;
 }
 
