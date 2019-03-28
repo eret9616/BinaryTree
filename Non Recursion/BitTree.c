@@ -88,18 +88,11 @@ void NonRecursion(BinaryTree * root)
             printf("%c",node->root->ch);
         }else
         {
-
-	        // 对于先序遍历，压入顺序应该倒过来:先压右 再压左 最后压根
-			// 对于中序遍历  压入顺序应是      先压右 再压中 最后压左
-			// 对于后序遍历  压入顺序应该是    先压中 再压右 最后压左
-
             node->flag = MY_TRUE;
-
 
             Push_LinkStack(stack,(LinkNode *)CreateBiTreeStackNode(node->root->rchild,MY_FALSE));
             Push_LinkStack(stack,(LinkNode *)CreateBiTreeStackNode(node->root->lchild,MY_FALSE));
             Push_LinkStack(stack,(LinkNode *)node);
-
         }
     }
 }
